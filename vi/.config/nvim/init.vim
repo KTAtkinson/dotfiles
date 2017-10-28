@@ -30,6 +30,6 @@ set cc=80
 " execute pathogen#infect()
 
 " enable  mouse
-set mouse=a
-set mousehide=1
-set mouseshape=arrow
+" set mouse=a
+" set mousehide=1
+" set mouseshape=arrow
