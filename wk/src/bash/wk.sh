@@ -29,6 +29,9 @@ case $WK_ACTION in
         git -C $CODE_PATH checkout master
       fi
 
+      git -C $CODE_PATH reset --hard reddit/master
+      git add *
+      git commit --amend -m "PLACEHOLDER"
       git -C $CODE_PATH reset --hard $NAME
     done;
     ;;   
