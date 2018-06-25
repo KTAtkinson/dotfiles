@@ -33,3 +33,5 @@ set cc=80
 " set mouse=a
 " set mousehide=1
 " set mouseshape=arrow
+
+colorscheme default

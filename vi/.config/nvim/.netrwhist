@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/katie/workspace/LETL-110_fingerprint-consumer/private/r2admin/enrichment/consumers'
+let g:netrw_dirhist_2='/home/katie/workspace/LETL-110_fingerprint-consumer/private/r2admin/enrichment'
+let g:netrw_dirhist_3='/home/katie/workspace/google-csai-improve-stats/private/r2admin/enrichment/clients'
+let g:netrw_dirhist_4='/home/katie/workspace/remove-gvi-consumers/puppet'
+let g:netrw_dirhist_5='/home/katie/go/src/github.com/KTAtkinson/LoanSimulator/loan'
