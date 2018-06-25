@@ -170,3 +170,15 @@ source <(minikube completion bash)
 
 # The next line enables shell command completion for gcloud.
 # if [ -f '/home/katie/src/google-cloud-sdk/completion.bash.inc' ]; then source '/home/katie/src/google-cloud-sdk/completion.bash.inc'; fi
+# Add go path to
+export PATH=/home/katie/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin
+
+
+# Apache pig env
+export PIG_HOME=$HOME/src/pig-0.16.0
+export PATH=$PATH:$HOME/src/pig-0.16.0/bin
+export PATH=/home/katie/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/go/bin:/home/katie/src/pig-0.16.0/bin:/home/katie/.local/bin/
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
