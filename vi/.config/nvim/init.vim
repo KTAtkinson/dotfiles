@@ -34,4 +34,4 @@ set cc=80
 " set mousehide=1
 " set mouseshape=arrow
 
-colorscheme default
+colorscheme slate
