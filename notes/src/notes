@@ -1,0 +1,12 @@
+#! /bin/bash
+set -e
+set +x 
+
+NOTESDIR=${NOTES_WEEKLY_DIR:-$HOME/notes/weekly}
+echo "Saving notes to: $NOTESDIR"
+NOTEPATH=$NOTESDIR/$(date +%Y/%W.md)
+mkdir -p $(basename $NOTEPATH)
+echo -e $(date +%n[%A\ %d\ %B\ %Y]%n) >> $NOTEPATH
+
+/usr/bin/editor $NOTEPATH
+
