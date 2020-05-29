@@ -1,0 +1,16 @@
+source ${i3_CONFIG_DIR:-~/.config/i3}/scripts/display_helper.sh
+
+# preserve newlines in xrandr output
+cmd=${XRANDR_CMD:-autorandr --load}
+profile=$(layoutname)
+defaultprofile=${DEFAULT_RANDR_PROFILE:-default}
+
+echo "Applying config ${profile} using ${cmd}"
+$cmd $profile
+
+if [ "$?" -ne "0" ] 
+then
+	echo "Failed to laod configuration.\nLoading default config, $defaultprofile."
+	$cmd $defaultprofile
+fi
+
