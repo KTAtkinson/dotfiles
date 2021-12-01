@@ -1,4 +1,7 @@
-source ${i3_CONFIG_DIR:-~/.config/i3}/scripts/display_helper.sh
+layoutname()
+{
+	echo $(xrandr | grep -w "connected" | cut -d " " -f 1 | sort | tr "\n" ":")
+}
 
 # preserve newlines in xrandr output
 cmd=${XRANDR_CMD:-autorandr --load}
@@ -10,7 +13,7 @@ $cmd $profile
 
 if [ "$?" -ne "0" ] 
 then
-	echo "Failed to laod configuration.\nLoading default config, $defaultprofile."
+	echo "Failed to load configuration.\nLoading default config, $defaultprofile."
 	$cmd $defaultprofile
 fi
 

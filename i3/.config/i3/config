@@ -44,7 +44,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
  
 # start a terminal
-bindsym $mod+Return exec gnome-terminal 
+bindsym $mod+Return exec gnome-terminal -- "tmux"
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -215,5 +215,10 @@ assign [class="^(Gnome-terminal|xterm)"] workspace $ws1
 for_window [instance="app.slack.com__client"] move window workspace $ws3 
 
 # assign any other window to default workspace
-assign [class=".*"] workspace $ws10
+# assign [class=".*"] workspace $ws10
 
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous

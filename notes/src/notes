@@ -4,9 +4,17 @@ set +x
 
 NOTESDIR=${NOTES_WEEKLY_DIR:-$HOME/notes/weekly}
 echo "Saving notes to: $NOTESDIR"
+TMPDIR=$NOTESDIR/tmp
+if [ ! -d $TMPDIR ]
+then
+    mkdir $TMPDIR
+fi
+TMPPATH=$TMPDIR/.$(date +%N).tmp
+nvim $TMPPATH
+
 NOTEPATH=$NOTESDIR/$(date +%Y/%W.md)
 mkdir -p $(basename $NOTEPATH)
-echo -e $(date +%n[%A\ %d\ %B\ %Y]%n) >> $NOTEPATH
-
-/usr/bin/editor $NOTEPATH
+echo -e \\n$(date +"# %A %d %B %Y")\\n >> $NOTEPATH
+cat $TMPPATH >> $NOTEPATH
+rm -rf $TMPDIR
 

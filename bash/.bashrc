@@ -120,12 +120,12 @@ alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
 ## Git PS
-source $HOME/src/bash/git-prompt.sh
-# Colors for PS1
-green=$(tput setaf 2)
-blue=$(tput setaf 6)
-red=$(tput setaf 1)
-reset=$(tput sgr0)
+# source $HOME/src/bash/git-prompt.sh
+# # Colors for PS1
+# green=$(tput setaf 2)
+# blue=$(tput setaf 6)
+# red=$(tput setaf 1)
+# reset=$(tput sgr0)
 
 #changes shell prompt
 # Add git branch if its present to PS1
@@ -182,3 +182,24 @@ export PATH=/home/katie/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/s
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Set Stow directory
+export STOW_DIR=$HOME/src/github.com/KTAtkinson/dotfiles
+
+# If there is a secrets file include its contents
+if [ -f $HOME/.secrets ]; then
+	source $HOME/.secrets
+fi
+
+# Add go bin to system PATH
+export GOVERSION=go1.14
+export PATH=$PATH:$HOME/src/$GOVERSION/bin
+export PATH=$PATH:$HOME/go/bin
+
+# Ansible environment variables
+export ANSIBLE_ROMOTE_USER=katie.atkinson
+
+export CLOUD2="alsa_card.usb-Kingston_HyperX_Virtual_Surround_Sound_00000000-00"
+export CLOUD2ANALOG="analog-stereo"
+export CLOUD2DIGITAL="iec958-stereo"
+alias cloud2="pactl set-card-profile $CLOUD2 output:$CLOUD2DIGITAL+input:$CLOUD2DIGITAL"

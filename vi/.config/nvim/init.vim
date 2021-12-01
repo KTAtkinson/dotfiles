@@ -11,6 +11,9 @@ set ts=4
 " indent when moving to the next line while writing code
 set autoindent
 
+" fix autocomplete to complete files names closer to how the terminal does it
+set wildmode=longest:full,full
+
 " expand tabs into spaces
 set expandtab
 
@@ -34,4 +37,4 @@ set cc=80
 " set mousehide=1
 " set mouseshape=arrow
 
-colorscheme default
+colorscheme slate 
