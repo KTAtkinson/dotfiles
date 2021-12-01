@@ -1,0 +1,13 @@
+#!/bin/bash
+
+i3-msg \
+    "
+workspace 1
+append_layout /home/katie/.config/i3/workspaces/1.json
+
+workspace 2
+append_layout /home/katie/.config/i3/workspaces/2.json
+
+workspace 3
+append_layout /home/katie/.config/i3/workspaces/3.json
+"
