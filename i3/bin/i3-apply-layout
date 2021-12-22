@@ -1,0 +1,6 @@
+#!/bin/bash
+i3-msg \
+	"
+append_layout ~/.config/i3/workspaces/1.json
+append_layout ~/.config/i3/workspaces/2.json
+"
