@@ -192,3 +192,4 @@ if [ -f '/home/katie/src/google-cloud-sdk/completion.bash.inc' ]; then . '/home/
 # Setup SSH auth socket, started in systemd
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export SSH_AGENT_PID="$(pgrep -U ${USER} ssh-agent)"
+. "$HOME/.cargo/env"
