@@ -46,7 +46,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
  
 # start a terminal
-bindsym $mod+Return exec gnome-terminal -- tmux
+bindsym $mod+Return exec gnome-terminal -v -- tmux -v
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -198,7 +198,7 @@ bar {
 
 bindsym $mod+z exec loginctl lock-session
 
-bindsym $mod+x exec google-chrome-stable --profile-directory="Default" --new-window
+bindsym $mod+x exec firefox 
 bindsym $mod+Shift+x exec google-chrome-stable --profile-directory="Profile 1"  --new-window
 
 # open slack client in Google Chrome application window
@@ -226,3 +226,5 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Print screen
+bindsym Print exec gnome-screenshot --area

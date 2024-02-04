@@ -1,6 +1,9 @@
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
+
+echo "Current time: $(date)"
 
 # If not running interactively, don't do anything
 case $- in
@@ -193,3 +196,5 @@ if [ -f '/home/katie/src/google-cloud-sdk/completion.bash.inc' ]; then . '/home/
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export SSH_AGENT_PID="$(pgrep -U ${USER} ssh-agent)"
 . "$HOME/.cargo/env"
+
+echo "Current time: $(date)"
